@@ -1,83 +1,110 @@
-# JustForToday: A Productivity App for ADHD Individuals 🎯🧠  
-**Get Organized, Stay Focused, and Thrive with ADHD!**  
+# Daily Journal
 
-JustForToday is a revolutionary productivity app designed specifically for individuals with ADHD. We understand the challenges of managing tasks, staying focused, and maintaining a healthy routine. Our app empowers you to:  
+A terminal-based daily journaling application built with Clojure.
 
-- 📝 **Create a Seamless Plan:** Combine your needs and wants into a single, user-friendly interface.  
-- 🗂️ **Categorize and Prioritize:** Organize tasks by category (healthy habits, work, personal) and let our intelligent algorithm prioritize them based on "perfect ADHD day" principles.  
-- 📅 **Visualize Your Success:** Stay on track with an intuitive calendar view showcasing daily and weekly schedules, with clear visual indicators for task intensity and importance.  
-- 🎨 **Minimalist & ADHD-Friendly Design:** Clean, uncluttered, and distraction-free interface paired with a calming yet visually stimulating color palette.  
+## Features
 
----
+- Create daily journal entries with prompts for reflection
+- View all entries with color-coded formatting
+- Search entries by content or date range
+- Edit existing entries
+- Delete entries
+- Unique entry IDs in JFAyyyymmdd format
 
-## ✨ Built with Your Wellbeing in Mind  
-JustForToday goes beyond simple task management. We've integrated best practices from leading experts like *Anna Lemke* and *Andrew Huberman* to create a healthy regimen that supports your mental well-being and social connections.  
+## Prerequisites
 
-### **Key Features (v1):**  
-- ✅ Combined User Input Form  
-- ✅ Task Categorization (Description, Frequency, Duration, Intensity, Impact)  
-- ✅ Priority Algorithm (Based on "Perfect ADHD Day")  
-- ✅ Calendar View (Daily & Weekly)  
-- ✅ Visual Indicators for Task Intensity & Importance  
-- ✅ Minimalist Design with ADHD-Friendly Color Palette  
-- ✅ Google Calendar Integration (Syncs Tasks)  
+- Java Runtime Environment (JRE) 8 or higher
+- Leiningen (for development and building)
 
----
+## Installation
 
-## 🌟 Future Enhancements (v2):  
-- 🔐 User Authentication and Accounts  
-- 📊 Feedback Mechanisms for User Input  
-- 🧠 Deeper Integration of Expert Research  
+### Option 1: Run from Source with Leiningen
 
----
-
-## 🚀 Get Started Today!  
-JustForToday is currently under development, but we're excited to share it with you soon! Stay tuned for updates and follow us on social media for more information.  
-
----
-
-## 🛠️ Technology Stack  
-- **Frontend:** React.js  
-- **CSS Framework:** Tailwind CSS  
-- **Google Calendar API:** For task syncing  
-
----
-
-## 🖥️ How to Clone and Launch the App  
-
-### **Prerequisites**  
-Make sure you have the following installed on your machine:  
-- [Node.js](https://nodejs.org/) and npm (or [Yarn](https://yarnpkg.com/))  
-
-### **Steps to Get Started**  
-1. **Clone the Repository:**  
-   ```bash
-   git clone https://github.com/your-username/justfortoday.git
-2. **Navigate to the Project Directory:**
+1. Clone the repository:
     ```bash
-    cd justfortoday
-3. **Install Dependencies:**
+    git clone https://github.com/yourusername/daily-journal.git
+    cd daily-journal
+    ```
+
+2. Run the application:
     ```bash
-    npm install  # or yarn install
-4. **Start the Development Server:**
+    lein run
+    ```
+
+### Option 2: Build and Run Standalone JAR
+
+1. Clone the repository:
     ```bash
-    npm start  # or yarn start
-5. **Launch the App:**
-    The app will open in your browser at http://localhost:3000.
+    git clone https://github.com/yourusername/daily-journal.git
+    cd daily-journal
+    ```
 
----
+2. Build the uberjar:
+    ```bash
+    lein uberjar
+    ```
 
-## ❤️ Contribute
-Want to help us build JustForToday? Feel free to fork the repository and submit a pull request!
+3. Run the compiled JAR:
+    ```bash
+    java -jar target/uberjar/daily-journal-0.1.0-SNAPSHOT-standalone.jar
+    ```
 
----
+## Usage
 
-## 📢 Stay Connected  
-Follow us on social media for updates, insights, and tips on thriving with ADHD!  
+After starting the application, you'll see a menu with the following options:
 
-☕ If you'd like to support my work, you can buy me a coffee: [buymeacoffee.com/dadv](https://buymeacoffee.com/dadv)
+1. Create a new entry
+2. View all entries
+3. Search entries
+4. Edit an entry
+5. Delete an entry
+6. Exit
 
----
+### Creating an Entry
 
-## 🙏 جزاك اللهُ خيراً
-Thank you for your interest in JustForToday! Together, let’s create the "perfect ADHD day" and make productivity accessible for everyone. 🌟
+When creating a new entry, you'll be prompted to answer:
+- How you're feeling today
+- What you did well
+- What you want to focus on tomorrow
+- How you plan to improve
+
+Each entry is automatically dated and assigned a unique ID in the format `JFAyyyymmdd`.
+
+### Viewing Entries
+
+Entries are displayed in reverse chronological order (newest first), with color-coded formatting for easy reading.
+
+### Searching Entries
+
+You can search by:
+- Content across all fields
+- Date range
+
+### Editing and Deleting
+
+Entries can be selected by their number in the list for editing or deletion.
+
+## Development
+
+### Project Structure
+
+- `src/daily_journal/core.clj` - Main application code
+- `project.clj` - Project configuration and dependencies
+
+### Key Technologies
+
+- Clojure - Functional programming language
+- Leiningen - Build tool
+- EDN (Extensible Data Notation) - Data storage format
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
